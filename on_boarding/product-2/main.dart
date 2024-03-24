@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'helpers.dart';
-import 'manager.dart';
+import 'product_manager.dart';
 
 void main(){
 var Manger = ProductManager();

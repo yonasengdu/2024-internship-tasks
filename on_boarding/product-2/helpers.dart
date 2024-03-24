@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'manager.dart';
+import 'product_manager.dart';
 import 'product.dart';
 
 
