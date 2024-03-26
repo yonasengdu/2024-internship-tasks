@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yonas/pages/add_or_update_page.dart';
 import 'package:yonas/pages/details_page.dart';
 import 'package:yonas/widgets/card_widget.dart';
@@ -19,7 +20,6 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
-          
                     children: [
                       Container(
                         width: 50,
@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(onPressed: (){
-           Navigator.push(context, MaterialPageRoute(builder: (context) => AddOrUpdatePage()));
+           context.push('/addOrUpdatePage');
         },
         shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
