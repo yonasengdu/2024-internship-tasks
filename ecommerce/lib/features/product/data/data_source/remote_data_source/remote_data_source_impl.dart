@@ -22,7 +22,7 @@ class RemoteDataSourceImpl implements RemoteDataSource {
         Uri.parse("https://products-api-5a5n.onrender.com/api/v1/products"));
 
     if (response.statusCode != 201) {
-      throw const ServerException(message: "server Failure");
+      throw  ServerException(message: "server Failure");
     }
   }
 
@@ -34,7 +34,7 @@ class RemoteDataSourceImpl implements RemoteDataSource {
         "https://products-api-5a5n.onrender.com/api/v1/products/${id}"));
 
     if (response.statusCode != 200) {
-      throw const ServerException(message: "server Failure");
+      throw  ServerException(message: "server Failure");
     }
   }
 
@@ -48,7 +48,7 @@ class RemoteDataSourceImpl implements RemoteDataSource {
     if (response.statusCode == 200) {
       return ProductModel.fromMap(json.decode(response.body)["product"]);
     } else {
-      throw const ServerException(message: "server Failure");
+      throw  ServerException(message: "server Failure");
     }
   }
 
@@ -61,7 +61,7 @@ class RemoteDataSourceImpl implements RemoteDataSource {
       final List<dynamic> jsonData = jsonDecode(response.body)["products"];
       return jsonData.map((e) => ProductModel.fromMap(e)).toList();
     } else {
-      throw const ServerException(message: "server Failure");
+      throw  ServerException(message: "server Failure");
     }
   }
 
@@ -80,7 +80,7 @@ class RemoteDataSourceImpl implements RemoteDataSource {
       final List<dynamic> jsonData = jsonDecode(response.body)["products"];
       return jsonData.map((e) => ProductModel.fromMap(e)).toList();
     } else {
-      throw const ServerException(message: "server Failure");
+      throw  ServerException(message: "server Failure");
     }
   }
 
@@ -93,7 +93,7 @@ class RemoteDataSourceImpl implements RemoteDataSource {
         "https://products-api-5a5n.onrender.com/api/v1/products${id}"));
 
     if (response.statusCode != 201) {
-      throw const ServerException(message: "server Failure");
+      throw  ServerException(message: "server Failure");
     }
   }
 }

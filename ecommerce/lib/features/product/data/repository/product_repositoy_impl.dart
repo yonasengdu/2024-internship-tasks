@@ -24,7 +24,7 @@ class ProductRepositoryImpl implements ProductRepository {
           title, price, description, catagory, imageUrl);
       return Right(res);
     } on ServerException {
-      return const Left(ServerFailure(message: "server Error"));
+      return  Left(ServerFailure(message: "server Error"));
     }
   }
 
@@ -34,7 +34,7 @@ class ProductRepositoryImpl implements ProductRepository {
       final res = await remoteDataSource.deleteProduct(id);
       return Right(res);
     } on ServerException {
-      return const Left(ServerFailure(message: "server Error"));
+      return  Left(ServerFailure(message: "server Error"));
     }
   }
 
@@ -44,7 +44,7 @@ class ProductRepositoryImpl implements ProductRepository {
       final product = await remoteDataSource.getProduct(id);
       return Right(product);
     } on ServerException {
-      return const Left(ServerFailure(message: "server Error"));
+      return  Left(ServerFailure(message: "server Error"));
     }
   }
 
@@ -54,7 +54,7 @@ class ProductRepositoryImpl implements ProductRepository {
       final products = await remoteDataSource.getProducts();
       return Right(products);
     } on ServerException {
-      return const Left(ServerFailure(message: "server Error"));
+      return  Left(ServerFailure(message: "server Error"));
     }
   }
 
@@ -64,7 +64,7 @@ class ProductRepositoryImpl implements ProductRepository {
       final products = await remoteDataSource.searchProducts(query);
       return Right(products);
     } on ServerException {
-      return const Left(ServerFailure(message: "server Error"));
+      return  Left(ServerFailure(message: "server Error"));
     }
   }
 
@@ -74,7 +74,7 @@ class ProductRepositoryImpl implements ProductRepository {
       final res = await remoteDataSource.updateProduct(id, title);
       return Right(res);
     } on ServerException {
-      return const Left(ServerFailure(message: "server Error"));
+      return  Left(ServerFailure(message: "server Error"));
     }
   }
 }

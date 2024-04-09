@@ -10,8 +10,13 @@ class AddProductUseCase implements UseCase<void, ProductParams> {
 
   @override
   ResultFuture<void> call(ProductParams params) async {
-    final product = await productRepository.addProduct(params.title,
-        params.price, params.description, params.catagory, params.imageUrl);
+    final product = await productRepository.addProduct(
+      params.title,
+      params.price,
+      params.description,
+      params.catagory,
+      params.imageUrl,
+    );
 
     return product;
   }
@@ -24,7 +29,7 @@ class ProductParams extends Equatable {
   final String catagory;
   final String imageUrl;
 
-  const ProductParams(
+   ProductParams(
       {required this.title,
       required this.price,
       required this.description,

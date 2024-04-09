@@ -3,7 +3,7 @@ import 'package:ecommerce/features/product/data/model/rating_model.dart';
 import 'package:ecommerce/features/product/domain/entity/product_entity.dart';
 
 class ProductModel extends ProductEntity {
-  const ProductModel({
+   ProductModel({
     required super.id,
     required super.title,
     required super.price,
