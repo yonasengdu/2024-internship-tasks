@@ -1,5 +1,3 @@
-
-
 import 'package:ecommerce/core/constants/routing_constants.dart';
 import 'package:ecommerce/features/product/presentation/screens/add_or_update_page.dart';
 import 'package:ecommerce/features/product/presentation/screens/details_page.dart';
@@ -14,19 +12,19 @@ final GoRouter router = GoRouter(
         path: '/',
         name: RouteConstants.homePageRouteName,
         builder: (BuildContext context, GoRouterState state) {
-          return const HomePage();
+          return HomePage();
         }),
     GoRoute(
         path: '/details',
         name: RouteConstants.detailsPageRouteName,
         builder: (BuildContext context, GoRouterState state) {
-          return const DetailsPage();
+          return DetailsPage(id: '');
         }),
     GoRoute(
         path: '/addOrUpdatePage',
         name: RouteConstants.addOrUpdatePageRouteName,
         builder: (BuildContext context, GoRouterState state) {
-          return const AddOrUpdatePage();
+          return ProductAdd();
         }),
   ],
 );
